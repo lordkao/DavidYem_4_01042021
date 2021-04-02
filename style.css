@@ -661,6 +661,8 @@ p {
 }
 
 .social {
+    display: flex;
+    justify-content: space-around;
     max-width: 400px;
     margin: auto auto 2rem auto;
 }
@@ -826,33 +828,78 @@ margin-bottom: 0px;
     width: 100%;
     font-size: 1.5rem;
 }
-@media (max-width: 400px) {
+
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .b-parallax {
+        background-attachment: scroll;
+    }
+    .description-agence__citation{
+        font-size: 2.2rem;
+        width: 60%;
+    }
+    .commentaire__citation{
+        font-size: 1.8rem;
+        width: 49%;
+        }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .b-parallax {
+        background-attachment: scroll;
+    }
+    .commentaire__citation{
+        font-size: 1.8rem;
+        width: 49%;
+        }
+}
+
+@media (max-width: 1024px) {
     .bloc {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .bloc.full-width-bloc,
+    .bloc-tile-2.full-width-bloc .container,
+    .bloc-tile-3.full-width-bloc .container,
+    .bloc-tile-4.full-width-bloc .container {
         padding-left: 0;
         padding-right: 0;
     }
 }
 
-@media (min-width: 481px){
-    .description-agence__citation{
-        font-size: 2.2rem;
-        width: 80%;
+@media (max-width: 991px) {
+    .container {
+        width: 100%;
     }
-    .commentaire__citation{
-        font-size: 2rem;
-        width: 80%;
+    .b-parallax {
+        background-attachment: scroll;
     }
-    .commentaire__auteur{
-        font-size: 1.2rem;
+    .page-container,
+    #hero-bloc {
+        overflow-x: hidden;
+        position: relative;
     }
-    .commentaire__client{
-        font-size: 2rem;
+    .bloc {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .bloc-group,
+    .bloc-group .bloc {
+        display: block;
+        width: 100%;
+    }
+    .bloc-fill-screen .fill-bloc-top-edge,
+    .bloc-fill-screen .fill-bloc-bottom-edge {
+        padding: 0 50px;
     }
 }
 
-@media (max-width: 767px) {
-    .bloc-mob-center-text {
-        text-align: center;
+@media (max-width: 992px) and (min-width: 768px) {
+    .navbar .nav {
+        max-width: 80%
+    }
+    .nav-center.navbar .nav {
+        max-width: 100%
     }
 }
 
@@ -862,11 +909,7 @@ margin-bottom: 0px;
         width: 60%;
     }
     .site-navigation {
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translate(0, -50%);
-        -webkit-transform: translateY(-50%);
+        
     }
     .nav > li .dropdown-menu a,
     .nav > li .dropdown-menu a:hover {
@@ -901,81 +944,10 @@ margin-bottom: 0px;
     }
 }
 
-@media (max-width: 1024px) {
-    .bloc {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .bloc.full-width-bloc,
-    .bloc-tile-2.full-width-bloc .container,
-    .bloc-tile-3.full-width-bloc .container,
-    .bloc-tile-4.full-width-bloc .container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (max-width: 992px) and (min-width: 768px) {
-    .navbar .nav {
-        max-width: 80%
-    }
-    .nav-center.navbar .nav {
-        max-width: 100%
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .b-parallax {
-        background-attachment: scroll;
-    }
-    .commentaire__citation{
-        font-size: 1.8rem;
-        width: 49%;
-        }
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-    .b-parallax {
-        background-attachment: scroll;
-    }
-    .description-agence__citation{
-        font-size: 2.2rem;
-        width: 60%;
-    }
-    .commentaire__citation{
-        font-size: 1.8rem;
-        width: 49%;
-        }
-}
-
-@media (max-width: 991px) {
-    .container {
-        width: 100%;
-    }
-    .b-parallax {
-        background-attachment: scroll;
-    }
-    .page-container,
-    #hero-bloc {
-        overflow-x: hidden;
-        position: relative;
-    }
-    .bloc {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .bloc-group,
-    .bloc-group .bloc {
-        display: block;
-        width: 100%;
-    }
-    .bloc-fill-screen .fill-bloc-top-edge,
-    .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding: 0 50px;
-    }
-}
-
 @media (max-width: 767px) {
+    .bloc-mob-center-text {
+        text-align: center;
+    }
     .page-container {
         overflow-x: hidden;
         position: relative;
@@ -1113,3 +1085,28 @@ margin-bottom: 0px;
         height: 320px;
     }
 }
+
+@media (min-width: 481px){
+    .description-agence__citation{
+        font-size: 2.2rem;
+        width: 80%;
+    }
+    .commentaire__citation{
+        font-size: 2rem;
+        width: 80%;
+    }
+    .commentaire__auteur{
+        font-size: 1.2rem;
+    }
+    .commentaire__client{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .bloc {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
