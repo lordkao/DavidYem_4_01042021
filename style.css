@@ -799,6 +799,7 @@ h4 {
     font-size: 1.5rem;
     width: 90%;
 }
+
 .commentaire{
     display: flex;
     flex-direction: column;
@@ -807,16 +808,23 @@ h4 {
     width: 100%;
     height: auto;
 }
+
 .commentaire__citation{
 font-size: 1.5rem;
 font-style: italic;
 width: 80%;
 margin-bottom: 0px;
 }
+
 .commentaire__auteur{
     width: auto;
     height: auto;
     font-size: 1rem;
+}
+
+.commentaire__client{
+    width: 100%;
+    font-size: 1.5rem;
 }
 @media (max-width: 400px) {
     .bloc {
@@ -824,6 +832,7 @@ margin-bottom: 0px;
         padding-right: 0;
     }
 }
+
 @media (min-width: 481px){
     .description-agence__citation{
         font-size: 2.2rem;
@@ -836,12 +845,17 @@ margin-bottom: 0px;
     .commentaire__auteur{
         font-size: 1.2rem;
     }
+    .commentaire__client{
+        font-size: 2rem;
+    }
 }
+
 @media (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
     }
 }
+
 @media (min-width: 768px) {
     .description-agence__citation{
         font-size: 2.2rem;
@@ -886,6 +900,7 @@ margin-bottom: 0px;
         margin: 10px auto 0;
     }
 }
+
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
@@ -899,6 +914,7 @@ margin-bottom: 0px;
         padding-right: 0;
     }
 }
+
 @media (max-width: 992px) and (min-width: 768px) {
     .navbar .nav {
         max-width: 80%
