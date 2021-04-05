@@ -829,6 +829,13 @@ margin-bottom: 0px;
     font-size: 1.5rem;
 }
 
+.bloc-7{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
