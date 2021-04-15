@@ -837,11 +837,6 @@ margin-bottom: 0px;
     align-items: center;
 }
 
-.liens{
-    display: flex;
-    justify-content: space-around;
-}
-
 .formulaire{
     font-size: 1.7rem;
     text-decoration: underline;
@@ -1117,6 +1112,10 @@ margin-bottom: 0px;
     }
     .commentaire__client{
         font-size: 2rem;
+    }
+    .liens{
+        display: flex;
+        justify-content: space-around;
     }
 }
 
